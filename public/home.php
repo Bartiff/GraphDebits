@@ -34,7 +34,7 @@
         <script>
             var date = new Date()
             var annee = date.getFullYear()
-            var debitsJson = 'ressources/faune_4g-debits-' + annee + '.json'
+            var debitsJson = 'ressources/graphdebits-' + annee + '.json'
         </script>
         <script src="./bower_components/chart.js/dist/Chart.min.js"></script>
         <script src="public/js/scripts.js"></script>
