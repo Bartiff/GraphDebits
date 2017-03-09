@@ -1,5 +1,0 @@
-[
-{}
-,{"download": 29418010.150582924, "timestamp": "2017-03-09T09:30:59.705627", "ping": 53.127, "upload": 16832520.437216353, "server": {"latency": 53.127, "name": "Paris", "url": "http://paris1.speedtest.orange.fr/upload.php", "country": "France", "lon": "2.3470", "cc": "FR", "host": "paris1.speedtest.orange.fr:8080", "sponsor": "Orange", "url2": "http://paris1.speedtest-orange.hivane.net/speedtest/upload.php", "lat": "48.8742", "id": "5559", "d": 1.879853889154849}}
-,{"download": 22375504.95895314, "timestamp": "2017-03-09T09:32:16.906162", "ping": 52.63, "upload": 6669600.382368731, "server": {"latency": 52.63, "name": "Paris", "url": "http://paris1.speedtest.orange.fr/upload.php", "country": "France", "lon": "2.3470", "cc": "FR", "host": "paris1.speedtest.orange.fr:8080", "sponsor": "Orange", "url2": "http://paris1.speedtest-orange.hivane.net/speedtest/upload.php", "lat": "48.8742", "id": "5559", "d": 1.879853889154849}}
-]
