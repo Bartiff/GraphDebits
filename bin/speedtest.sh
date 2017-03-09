@@ -1,16 +1,20 @@
 #!/bin/bash
 
 year=$(date +%Y)
+path=`echo $(dirname $0) | sed 's/^.\{0\}\(.*\).\{4\}$/\1/'`
+echo $path
 
-if [ -f ressources/graphdebits-$year.json ]
+if [ -f $path/ressources/graphdebits-$year.json ]
 then
-   speed=`python bower_components/speedtest/index.py --server 5559 --json`
-   sed -i '$d' ressources/graphdebits-$year.json
-   echo ','$speed >> ressources/graphdebits-$year.json
-   echo ']' >> ressources/graphdebits-$year.json
+    #echo "Le fichier existe"
+   speed=`python $path/bower_components/speedtest/index.py --server 5559 --json`
+   sed -i '$d' $path/ressources/graphdebits-$year.json
+   echo ','$speed >> $path/ressources/graphdebits-$year.json
+   echo ']' >> $path/ressources/graphdebits-$year.json
 else
-   echo "[\n{}" > ressources/graphdebits-$year.json
-   speed=`python bower_components/speedtest/index.py --server 5559 --json`
-   echo ','$speed >> ressources/graphdebits-$year.json
-   echo ']' >> ressources/graphdebits-$year.json
+    #echo "Le fichier n'existe pas"
+   echo "[\n{}" > $path/ressources/graphdebits-$year.json
+   speed=`python $path/bower_components/speedtest/index.py --server 5559 --json`
+   echo ','$speed >> $path/ressources/graphdebits-$year.json
+   echo ']' >> $path/ressources/graphdebits-$year.json
 fi
