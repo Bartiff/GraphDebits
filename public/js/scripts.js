@@ -14,7 +14,6 @@ req.onreadystatechange = function () {
 			var maDate = new Date();
 			var mois = maDate.getMonth();
 			return numsMois[mois]
-			//return '01'
 		}
 
 		var recupNomMois = function(num) {
@@ -23,12 +22,12 @@ req.onreadystatechange = function () {
 			return nomsMois[numMois]
 		}
 
-		var debitMois = function(mois) {
+		var debitMois = function(mois, annnee) {
 			var debitsMoisDown = []
 			var debitsMoisUp = []
 			var debitsTime = []
 			for (var i = 1; i < debits.length; i++) {
-				if (debits[i].timestamp.indexOf('2017-' + mois) != -1) {
+				if (debits[i].timestamp.indexOf(annee + '-' + mois) != -1) {
 					debitsMoisDown.push(debits[i].download / 1000000);
 					debitsMoisUp.push(debits[i].upload / 1000000);
 					debitsTime.push(debits[i].timestamp);
@@ -42,8 +41,8 @@ req.onreadystatechange = function () {
 			return tab
 		}
 
-		var moyenneJour = function(mois) {
-    		var tableau = debitMois(mois)
+		var moyenneJour = function(mois, annnee) {
+    		var tableau = debitMois(mois, annnee)
     		var tabTime = []
     		var tabDown = []
     		var tabUp = []
